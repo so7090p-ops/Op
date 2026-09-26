@@ -1,0 +1,641 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background: #e9eeee;
+
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    color: #222;
+}
+
+.page {
+
+    width: 210mm;
+
+    min-height: 297mm;
+
+    margin: 15px auto;
+
+    background: #fff;
+
+    padding: 8mm 10mm;
+
+    position: relative;
+
+    box-shadow:
+        0 0 15px
+        rgba(0,0,0,.15);
+}
+
+
+/* =========================
+   الخطوط
+========================= */
+
+.top-line {
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            to left,
+            #159b8e,
+            #1693c4
+        );
+
+    margin:
+        -8mm -10mm 5mm;
+}
+
+
+/* =========================
+   الرأس
+========================= */
+
+.header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom: 8px;
+}
+
+.ministry-logo {
+
+    text-align: center;
+
+    width: 130px;
+
+    color: #159b8e;
+}
+
+.logo-dots {
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+
+    line-height: 15px;
+}
+
+.logo-title {
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.logo-en {
+
+    font-size: 8px;
+
+    color: #777;
+}
+
+.school-box {
+
+    border: 1.5px solid #159b8e;
+
+    border-radius: 16px;
+
+    padding: 8px 15px;
+
+    text-align: center;
+
+    line-height: 1.65;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    min-width: 190px;
+}
+
+
+/* =========================
+   العنوان
+========================= */
+
+.main-title {
+
+    width: 58%;
+
+    margin:
+        5px auto 12px;
+
+    border:
+        2px solid #218fb9;
+
+    border-radius: 2px;
+
+    padding: 6px;
+
+    text-align: center;
+
+    color: #164d5b;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   الجدول
+========================= */
+
+.info-table {
+
+    width: 100%;
+
+    border-collapse:
+        collapse;
+
+    margin-bottom: 10px;
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+.info-table th {
+
+    background: #20a18d;
+
+    color: white;
+
+    border:
+        1px solid #146d65;
+
+    padding: 6px;
+}
+
+.info-table td {
+
+    border:
+        1px solid #777;
+
+    padding: 7px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   الأقسام
+========================= */
+
+.content-section {
+
+    position: relative;
+
+    border:
+        1.5px solid #888;
+
+    border-radius: 14px;
+
+    margin-bottom: 10px;
+
+    min-height: 58px;
+
+    padding:
+        12px 18px 10px;
+
+    font-size: 10px;
+
+    line-height: 1.75;
+}
+
+.section-label {
+
+    position: absolute;
+
+    right: -1px;
+
+    top: -1px;
+
+    background: #20a18d;
+
+    color: white;
+
+    padding:
+        5px 13px;
+
+    border-radius:
+        0 9px 0 9px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+.section-content {
+
+    padding-top: 3px;
+
+    text-align: right;
+}
+
+
+/* =========================
+   القوائم
+========================= */
+
+.section-content ul {
+
+    margin:
+        0 0 0 10px;
+
+    padding-right: 15px;
+}
+
+.section-content li {
+
+    margin-bottom: 2px;
+}
+
+
+/* =========================
+   الشواهد
+========================= */
+
+.evidence-section {
+
+    position: relative;
+
+    border:
+        1.5px solid #168fbd;
+
+    border-radius: 14px;
+
+    height: 80px;
+
+    margin-top: 5px;
+
+    overflow: hidden;
+}
+
+.evidence-content {
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.qr-placeholder {
+
+    width: 70px;
+
+    height: 70px;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    color: #444;
+}
+
+.qr-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    margin:
+        0 auto 3px;
+
+    border:
+        3px solid #111;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   التوقيعات
+========================= */
+
+.signatures {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 12px;
+
+    border:
+        1.5px solid #888;
+
+    border-radius: 14px;
+
+    padding:
+        13px 25px 12px;
+
+    min-height: 70px;
+}
+
+.signature-box {
+
+    text-align: center;
+
+    font-size: 11px;
+
+    line-height: 2;
+}
+
+.signature-name {
+
+    min-height: 23px;
+}
+
+.signature-line {
+
+    margin-top: 4px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   التذييل
+========================= */
+
+.bottom-line {
+
+    position: absolute;
+
+    bottom: 0;
+
+    right: 0;
+
+    left: 0;
+
+    height: 7px;
+
+    background:
+        linear-gradient(
+            to left,
+            #159b8e,
+            #159b8e 55%,
+            #168fc0
+        );
+}
+
+
+/* =========================
+   زر التعديل
+========================= */
+
+.edit-button {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    background: #164d5b;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding:
+        10px 18px;
+
+    cursor: pointer;
+
+    font-family: Tahoma;
+}
+
+
+/* =========================
+   النافذة
+========================= */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,.55);
+
+    z-index: 1000;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px;
+}
+
+.modal.show {
+
+    display: flex;
+}
+
+.modal-box {
+
+    background: white;
+
+    width:
+        min(600px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    direction: rtl;
+}
+
+.modal-header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    border-bottom:
+        1px solid #ddd;
+
+    margin-bottom: 15px;
+}
+
+.modal-header button {
+
+    border: none;
+
+    background: #b54d4d;
+
+    color: white;
+
+    border-radius: 5px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.modal-box label {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin:
+        9px 0 4px;
+}
+
+.modal-box input,
+.modal-box textarea {
+
+    width: 100%;
+
+    border:
+        1px solid #ccd6d6;
+
+    border-radius: 6px;
+
+    padding: 8px;
+
+    font-family: Tahoma;
+
+    font-size: 11px;
+}
+
+.modal-box textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+.editor-buttons {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.editor-buttons button {
+
+    flex: 1;
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 10px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.save {
+
+    background: #159589;
+}
+
+.print {
+
+    background: #164d5b;
+}
+
+
+/* =========================
+   الطباعة A4
+========================= */
+
+@media print {
+
+    @page {
+
+        size: A4 portrait;
+
+        margin: 0;
+    }
+
+    body {
+
+        background: white;
+    }
+
+    .page {
+
+        width: 210mm;
+
+        height: 297mm;
+
+        min-height: 297mm;
+
+        margin: 0;
+
+        padding:
+            8mm 10mm;
+
+        box-shadow: none;
+
+        overflow: hidden;
+    }
+
+    .edit-button,
+    .modal {
+
+        display: none !important;
+    }
+
+    * {
+
+        -webkit-print-color-adjust:
+            exact !important;
+
+        print-color-adjust:
+            exact !important;
+    }
+}
