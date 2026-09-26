@@ -1,5 +1,5 @@
 /* =========================================
-   رابط الشواهد
+   رابط مجلد الشواهد
 ========================================= */
 
 const evidenceURL =
@@ -17,24 +17,23 @@ function createQRCode() {
 
 
     if (!container) {
+
         return;
+
     }
 
 
     container.innerHTML = "";
 
 
-    if (typeof QRCode === "undefined") {
+    /*
+     * إذا لم تحمل مكتبة QR بعد،
+     * نحاول مرة أخرى بعد ثانية.
+     */
 
-        container.innerHTML = `
-            <div style="
-                font-size:7px;
-                color:#777;
-                text-align:center;
-            ">
-                جاري تحميل الرمز...
-            </div>
-        `;
+    if (
+        typeof QRCode === "undefined"
+    ) {
 
         setTimeout(
             createQRCode,
@@ -42,26 +41,37 @@ function createQRCode() {
         );
 
         return;
+
     }
 
 
     try {
 
         new QRCode(
+
             container,
+
             {
-                text: evidenceURL,
 
-                width: 68,
+                text:
+                    evidenceURL,
 
-                height: 68,
+                width:
+                    68,
+
+                height:
+                    68,
 
                 correctLevel:
                     QRCode.CorrectLevel.H
+
             }
+
         );
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         console.error(
             "خطأ في إنشاء QR:",
@@ -69,6 +79,7 @@ function createQRCode() {
         );
 
     }
+
 }
 
 
@@ -81,6 +92,11 @@ function uploadSignature(
     input
 ) {
 
+
+    /*
+     * إذا لم يتم اختيار صورة
+     */
+
     if (
         !input ||
         !input.files ||
@@ -88,12 +104,17 @@ function uploadSignature(
     ) {
 
         return;
+
     }
 
 
     const file =
         input.files[0];
 
+
+    /*
+     * التأكد من أن الملف صورة
+     */
 
     if (
         !file.type.startsWith("image/")
@@ -104,6 +125,7 @@ function uploadSignature(
         );
 
         return;
+
     }
 
 
@@ -114,6 +136,7 @@ function uploadSignature(
     reader.onload =
         function(event) {
 
+
             const imageData =
                 event.target.result;
 
@@ -121,20 +144,25 @@ function uploadSignature(
             let image;
 
 
-            if (type === "teacher") {
+            /*
+             * توقيع المعلمة
+             */
+
+            if (
+                type === "teacher"
+            ) {
 
                 image =
                     document.getElementById(
                         "teacherSignature"
                     );
 
-
-                localStorage.setItem(
-                    "teacherSignature",
-                    imageData
-                );
-
             }
+
+
+            /*
+             * توقيع المديرة
+             */
 
             else {
 
@@ -143,16 +171,12 @@ function uploadSignature(
                         "principalSignature"
                     );
 
-
-                localStorage.setItem(
-                    "principalSignature",
-                    imageData
-                );
-
             }
 
 
-            /* إظهار الصورة */
+            /*
+             * عرض الصورة
+             */
 
             image.src =
                 imageData;
@@ -161,77 +185,25 @@ function uploadSignature(
             image.style.display =
                 "inline-block";
 
+
             /*
-             * مهم:
-             * لا نخفي كلمة "التوقيع".
-             * ستبقى ظاهرة بجانب الصورة.
+             * مهم جدًا:
+             *
+             * لا يوجد localStorage
+             *
+             * لذلك الصورة لا تحفظ
+             * بعد إغلاق الصفحة.
+             *
+             * عند فتح الرابط من جديد
+             * يبدأ بدون توقيع.
              */
 
         };
 
 
-    reader.readAsDataURL(file);
-
-}
-
-
-/* =========================================
-   تحميل التوقيعات المحفوظة
-========================================= */
-
-function loadSignatures() {
-
-
-    const teacherSignature =
-        localStorage.getItem(
-            "teacherSignature"
-        );
-
-
-    const principalSignature =
-        localStorage.getItem(
-            "principalSignature"
-        );
-
-
-    /* توقيع المعلمة */
-
-    if (teacherSignature) {
-
-        const image =
-            document.getElementById(
-                "teacherSignature"
-            );
-
-
-        image.src =
-            teacherSignature;
-
-
-        image.style.display =
-            "inline-block";
-
-    }
-
-
-    /* توقيع المديرة */
-
-    if (principalSignature) {
-
-        const image =
-            document.getElementById(
-                "principalSignature"
-            );
-
-
-        image.src =
-            principalSignature;
-
-
-        image.style.display =
-            "inline-block";
-
-    }
+    reader.readAsDataURL(
+        file
+    );
 
 }
 
@@ -255,9 +227,21 @@ document.addEventListener(
     "DOMContentLoaded",
     function() {
 
+
+        /*
+         * إنشاء QR
+         */
+
         createQRCode();
 
-        loadSignatures();
+
+        /*
+         * لا يوجد تحميل للتوقيعات.
+         *
+         * كل فتح جديد يبدأ
+         * بدون أي توقيع.
+         */
+
 
     }
 );

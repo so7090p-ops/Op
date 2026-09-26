@@ -1,22 +1,36 @@
+/* =========================================
+   الإعدادات العامة
+========================================= */
+
 * {
     box-sizing: border-box;
 }
+
 
 html {
     direction: rtl;
 }
 
+
 body {
+
     margin: 0;
+
     background: #e9eeee;
+
     color: #222;
-    font-family: Tahoma, Arial, sans-serif;
+
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
 }
 
 
-/* =================================
+/* =========================================
    زر الطباعة
-================================= */
+========================================= */
 
 .top-controls {
 
@@ -27,7 +41,9 @@ body {
     display: flex;
 
     justify-content: flex-start;
+
 }
+
 
 .print-top {
 
@@ -37,28 +53,37 @@ body {
 
     color: white;
 
-    padding: 9px 20px;
+    padding:
+        9px 20px;
 
     border-radius: 7px;
 
-    font-family: Tahoma, Arial, sans-serif;
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
 
     font-size: 12px;
 
     cursor: pointer;
 
     box-shadow:
-        0 2px 6px rgba(0,0,0,.15);
+        0 2px 6px
+        rgba(0,0,0,.15);
+
 }
+
 
 .print-top:hover {
+
     background: #117b73;
+
 }
 
 
-/* =================================
-   الصفحة
-================================= */
+/* =========================================
+   صفحة التقرير
+========================================= */
 
 .page {
 
@@ -66,22 +91,26 @@ body {
 
     min-height: 297mm;
 
-    margin: 0 auto 20px;
+    margin:
+        0 auto 20px;
 
     background: white;
 
-    padding: 8mm 10mm;
+    padding:
+        8mm 10mm;
 
     position: relative;
 
     box-shadow:
-        0 0 15px rgba(0,0,0,.15);
+        0 0 15px
+        rgba(0,0,0,.15);
+
 }
 
 
-/* =================================
+/* =========================================
    الشريط العلوي
-================================= */
+========================================= */
 
 .top-line {
 
@@ -96,23 +125,28 @@ body {
 
     margin:
         -8mm -10mm 5mm;
+
 }
 
 
-/* =================================
+/* =========================================
    الرأس
-================================= */
+========================================= */
 
 .header {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
-    align-items: center;
+    align-items:
+        center;
 
     margin-bottom: 8px;
+
 }
+
 
 .ministry-logo {
 
@@ -121,7 +155,9 @@ body {
     text-align: center;
 
     color: #159b8e;
+
 }
+
 
 .logo-dots {
 
@@ -130,27 +166,34 @@ body {
     letter-spacing: 3px;
 
     line-height: 15px;
+
 }
+
 
 .logo-title {
 
     font-size: 15px;
 
     font-weight: bold;
+
 }
+
 
 .logo-en {
 
     font-size: 8px;
 
     color: #777;
+
 }
+
 
 .school-box {
 
     min-width: 190px;
 
-    padding: 8px 15px;
+    padding:
+        8px 15px;
 
     border:
         1.5px solid #159b8e;
@@ -164,18 +207,22 @@ body {
     font-size: 10px;
 
     font-weight: bold;
+
+    color: #333;
+
 }
 
 
-/* =================================
-   العنوان
-================================= */
+/* =========================================
+   عنوان التقرير
+========================================= */
 
 .main-title {
 
     width: 58%;
 
-    margin: 5px auto 12px;
+    margin:
+        5px auto 12px;
 
     border:
         2px solid #218fb9;
@@ -189,25 +236,29 @@ body {
     font-size: 18px;
 
     font-weight: bold;
+
 }
 
 
-/* =================================
-   الجدول
-================================= */
+/* =========================================
+   جدول البيانات
+========================================= */
 
 .info-table {
 
     width: 100%;
 
-    border-collapse: collapse;
+    border-collapse:
+        collapse;
 
     margin-bottom: 10px;
 
     font-size: 10px;
 
     text-align: center;
+
 }
+
 
 .info-table th {
 
@@ -219,7 +270,9 @@ body {
 
     border:
         1px solid #146d65;
+
 }
+
 
 .info-table td {
 
@@ -229,12 +282,13 @@ body {
         1px solid #777;
 
     font-weight: bold;
+
 }
 
 
-/* =================================
+/* =========================================
    الأقسام
-================================= */
+========================================= */
 
 .content-section {
 
@@ -244,7 +298,8 @@ body {
 
     margin-bottom: 10px;
 
-    padding: 12px 18px 10px;
+    padding:
+        12px 18px 10px;
 
     border:
         1.5px solid #888;
@@ -254,7 +309,9 @@ body {
     font-size: 10px;
 
     line-height: 1.75;
+
 }
+
 
 .section-label {
 
@@ -264,7 +321,8 @@ body {
 
     right: -1px;
 
-    padding: 5px 13px;
+    padding:
+        5px 13px;
 
     background: #20a18d;
 
@@ -276,31 +334,38 @@ body {
     font-size: 10px;
 
     font-weight: bold;
+
 }
+
 
 .section-content {
 
     padding-top: 3px;
 
     text-align: right;
+
 }
+
 
 .section-content ul {
 
     margin: 0;
 
     padding-right: 17px;
+
 }
+
 
 .section-content li {
 
     margin-bottom: 2px;
+
 }
 
 
-/* =================================
+/* =========================================
    الشواهد
-================================= */
+========================================= */
 
 .evidence-section {
 
@@ -316,7 +381,9 @@ body {
         1.5px solid #168fbd;
 
     border-radius: 14px;
+
 }
+
 
 .evidence-content {
 
@@ -327,12 +394,16 @@ body {
     justify-content: center;
 
     align-items: center;
+
 }
+
 
 .qr-box {
 
     text-align: center;
+
 }
+
 
 #qrcode {
 
@@ -347,21 +418,27 @@ body {
     justify-content: center;
 
     align-items: center;
+
 }
+
 
 #qrcode img {
 
     width: 68px !important;
 
     height: 68px !important;
+
 }
+
 
 #qrcode canvas {
 
     width: 68px !important;
 
     height: 68px !important;
+
 }
+
 
 .qr-title {
 
@@ -370,24 +447,27 @@ body {
     color: #555;
 
     font-size: 7px;
+
 }
 
 
-/* =================================
+/* =========================================
    التوقيعات
-================================= */
+========================================= */
 
 .signatures {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 15px;
 
     margin-top: 12px;
 
-    padding: 10px 25px;
+    padding:
+        10px 25px;
 
     min-height: 75px;
 
@@ -395,30 +475,35 @@ body {
         1.5px solid #888;
 
     border-radius: 14px;
+
 }
+
 
 .signature-box {
 
     text-align: center;
 
     font-size: 11px;
+
 }
+
 
 .signature-name {
 
     min-height: 22px;
 
     line-height: 1.7;
+
 }
 
 
-/* =================================
+/* =========================================
    منطقة التوقيع
-================================= */
+========================================= */
 
 .signature-area {
 
-    height: 43px;
+    min-height: 45px;
 
     display: flex;
 
@@ -427,10 +512,28 @@ body {
     align-items: center;
 
     gap: 8px;
+
 }
 
 
-/* الصورة */
+/* كلمة التوقيع */
+
+.signature-text {
+
+    display: inline-block;
+
+    color: #555;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+}
+
+
+/* صورة التوقيع */
 
 .signature-image {
 
@@ -441,33 +544,19 @@ body {
     max-height: 38px;
 
     object-fit: contain;
+
 }
 
 
-/* كلمة التوقيع */
-
-#teacherSignatureText,
-#principalSignatureText {
-
-    display: inline-block;
-
-    color: #555;
-
-    font-size: 10px;
-
-    font-weight: bold;
-}
-
-
-/* =================================
-   زر رفع التوقيع
-================================= */
+/* =========================================
+   زر الكاميرا
+========================================= */
 
 .upload-signature {
 
-    width: 26px;
+    width: 27px;
 
-    height: 26px;
+    height: 27px;
 
     display: inline-flex;
 
@@ -485,25 +574,28 @@ body {
 
     font-size: 12px;
 
-    transition: .2s;
+    flex-shrink: 0;
+
 }
+
 
 .upload-signature:hover {
 
     background: #117b73;
 
-    transform: scale(1.05);
 }
+
 
 .upload-signature input {
 
     display: none;
+
 }
 
 
-/* =================================
-   التذييل
-================================= */
+/* =========================================
+   الشريط السفلي
+========================================= */
 
 .bottom-line {
 
@@ -524,21 +616,24 @@ body {
             #159b8e 55%,
             #168fc0
         );
+
 }
 
 
-/* =================================
+/* =========================================
    الجوال
-================================= */
+========================================= */
 
-@media (max-width:700px) {
+@media (max-width: 700px) {
 
     .top-controls {
 
         width: 100%;
 
         padding: 0 10px;
+
     }
+
 
     .page {
 
@@ -547,42 +642,54 @@ body {
         margin: 0;
 
         padding: 15px;
+
     }
+
 
     .header {
 
         gap: 8px;
+
     }
+
 
     .ministry-logo {
 
         width: 90px;
+
     }
+
 
     .logo-title {
 
         font-size: 11px;
+
     }
+
 
     .school-box {
 
         min-width: 145px;
 
         font-size: 8px;
+
     }
+
 
     .main-title {
 
         width: 80%;
 
         font-size: 15px;
+
     }
+
 }
 
 
-/* =================================
-   الطباعة
-================================= */
+/* =========================================
+   الطباعة A4
+========================================= */
 
 @media print {
 
@@ -591,7 +698,9 @@ body {
         size: A4 portrait;
 
         margin: 0;
+
     }
+
 
     html,
     body {
@@ -605,12 +714,18 @@ body {
         padding: 0;
 
         background: white !important;
+
     }
+
+
+    /* إخفاء زر الطباعة */
 
     .top-controls {
 
         display: none !important;
+
     }
+
 
     .page {
 
@@ -622,37 +737,55 @@ body {
 
         margin: 0;
 
-        padding: 8mm 10mm;
+        padding:
+            8mm 10mm;
 
         box-shadow: none;
 
         overflow: hidden;
+
     }
 
-    /* إخفاء زر الكاميرا فقط */
+
+    /* إخفاء الكاميرا */
+
     .upload-signature {
 
         display: none !important;
+
     }
+
 
     /* كلمة التوقيع تبقى */
-    #teacherSignatureText,
-    #principalSignatureText {
+
+    .signature-text {
 
         display: inline-block !important;
+
     }
 
+
+    /* صورة التوقيع تبقى */
+
     .signature-image {
+
+        display: inline-block !important;
 
         max-width: 35mm !important;
 
         max-height: 12mm !important;
+
     }
+
 
     .signature-area {
 
-        height: 13mm !important;
+        min-height: 13mm !important;
+
     }
+
+
+    /* QR */
 
     #qrcode img,
     #qrcode canvas {
@@ -660,12 +793,20 @@ body {
         width: 23mm !important;
 
         height: 23mm !important;
+
     }
+
+
+    /* الحفاظ على الألوان */
 
     * {
 
-        -webkit-print-color-adjust: exact !important;
+        -webkit-print-color-adjust:
+            exact !important;
 
-        print-color-adjust: exact !important;
+        print-color-adjust:
+            exact !important;
+
     }
+
 }

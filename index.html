@@ -2,91 +2,211 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>تقرير مبادرة</title>
 
     <!-- مكتبة QR -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+    </script>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- ملف التنسيق -->
+    <link
+        rel="stylesheet"
+        href="style.css">
+
 </head>
+
 
 <body>
 
-<!-- زر الطباعة أعلى الصفحة -->
+
+<!-- =========================================
+     زر الطباعة
+========================================= -->
+
 <div class="top-controls">
-    <button class="print-top" onclick="printReport()">
+
+    <button
+        class="print-top"
+        onclick="printReport()">
+
         🖨️ طباعة التقرير
+
     </button>
+
 </div>
 
 
+
+<!-- =========================================
+     صفحة التقرير
+========================================= -->
+
 <div class="page">
+
+
+    <!-- الشريط العلوي -->
 
     <div class="top-line"></div>
 
-    <!-- الرأس -->
+
+
+    <!-- =====================================
+         رأس الصفحة
+    ====================================== -->
+
     <header class="header">
 
+
+        <!-- شعار الوزارة -->
+
         <div class="ministry-logo">
-            <div class="logo-dots">••••••</div>
-            <div class="logo-title">وزارة التعليم</div>
-            <div class="logo-en">Ministry of Education</div>
+
+            <div class="logo-dots">
+                ••••••
+            </div>
+
+            <div class="logo-title">
+                وزارة التعليم
+            </div>
+
+            <div class="logo-en">
+                Ministry of Education
+            </div>
+
         </div>
 
+
+
+        <!-- بيانات المدرسة -->
+
         <div class="school-box">
-            <div>المملكة العربية السعودية</div>
-            <div>إدارة التعليم بمنطقة القصيم</div>
+
             <div>
-                المدرسة /
-                <span id="schoolName">متوسطة وثانوية ربيق</span>
+                المملكة العربية السعودية
             </div>
+
+            <div>
+                إدارة التعليم بمنطقة القصيم
+            </div>
+
+            <div>
+
+                المدرسة /
+
+                <span id="schoolName">
+                    متوسطة وثانوية ربيق
+                </span>
+
+            </div>
+
         </div>
+
 
     </header>
 
 
-    <!-- العنوان -->
+
+    <!-- =====================================
+         عنوان التقرير
+    ====================================== -->
+
     <div class="main-title">
+
         تقرير مبادرة
-        <span id="titleProgram">«ورد وأثر»</span>
+
+        <span id="titleProgram">
+            «ورد وأثر»
+        </span>
+
     </div>
 
 
-    <!-- البيانات -->
+
+    <!-- =====================================
+         بيانات المبادرة
+    ====================================== -->
+
     <table class="info-table">
 
+
         <thead>
+
             <tr>
-                <th>اسم البرنامج</th>
-                <th>التاريخ</th>
-                <th>الفترة</th>
-                <th>الفئة المستهدفة</th>
+
+                <th>
+                    اسم البرنامج
+                </th>
+
+                <th>
+                    التاريخ
+                </th>
+
+                <th>
+                    الفترة
+                </th>
+
+                <th>
+                    الفئة المستهدفة
+                </th>
+
             </tr>
+
         </thead>
 
+
         <tbody>
+
             <tr>
-                <td id="programName">مبادرة «ورد وأثر»</td>
-                <td id="programDate">٣ / ٤ / ١٤٤٨هـ</td>
-                <td id="programPeriod">٤ أسابيع</td>
-                <td id="targetGroup">طالبات المدرسة</td>
+
+                <td id="programName">
+                    مبادرة «ورد وأثر»
+                </td>
+
+                <td id="programDate">
+                    ٣ / ٤ / ١٤٤٨هـ
+                </td>
+
+                <td id="programPeriod">
+                    ٤ أسابيع
+                </td>
+
+                <td id="targetGroup">
+                    طالبات المدرسة
+                </td>
+
             </tr>
+
         </tbody>
+
 
     </table>
 
 
-    <!-- فكرة المبادرة -->
+
+    <!-- =====================================
+         فكرة المبادرة
+    ====================================== -->
+
     <section class="content-section">
+
 
         <div class="section-label">
             فكرة المبادرة
         </div>
 
-        <div class="section-content" id="ideaContent">
+
+        <div
+            class="section-content"
+            id="ideaContent">
+
 
             مبادرة «ورد وأثر» هي مبادرة تربوية إيمانية تهدف
             إلى تعزيز المحافظة على أذكار الصباح والمساء لدى
@@ -94,219 +214,378 @@
             مستمرة تسهم في بناء شخصية متوازنة، وتعزيز الطمأنينة
             والارتباط بالله تعالى.
 
+
             <br><br>
+
 
             وتقوم المبادرة على تقديم الأذكار بطريقة محفزة
             وتفاعلية من خلال بطاقات الأذكار، والتحديات اليومية،
             والمسابقات والأنشطة المتنوعة، بما يشجع الطالبات
             على الاستمرار والمشاركة.
 
+
         </div>
+
 
     </section>
 
 
-    <!-- الأهداف -->
+
+    <!-- =====================================
+         الأهداف
+    ====================================== -->
+
     <section class="content-section">
+
 
         <div class="section-label">
             الأهداف
         </div>
 
+
         <div class="section-content">
 
+
             <ul>
-                <li>تعزيز ارتباط الطالبات بذكر الله تعالى.</li>
-                <li>تشجيع المحافظة على أذكار الصباح والمساء.</li>
-                <li>غرس قيمة المداومة والاستمرارية في الأعمال الصالحة.</li>
-                <li>تعريف الطالبات بفضل الذكر وأثره في حياة المسلم.</li>
-                <li>توظيف وسائل مبتكرة ومشوقة لنشر الأذكار.</li>
-                <li>تعزيز روح المشاركة والتعاون بين الطالبات.</li>
+
+
+                <li>
+                    تعزيز ارتباط الطالبات بذكر الله تعالى.
+                </li>
+
+
+                <li>
+                    تشجيع المحافظة على أذكار الصباح والمساء.
+                </li>
+
+
+                <li>
+                    غرس قيمة المداومة والاستمرارية في الأعمال الصالحة.
+                </li>
+
+
+                <li>
+                    تعريف الطالبات بفضل الذكر وأثره في حياة المسلم.
+                </li>
+
+
+                <li>
+                    توظيف وسائل مبتكرة ومشوقة لنشر الأذكار.
+                </li>
+
+
+                <li>
+                    تعزيز روح المشاركة والتعاون بين الطالبات.
+                </li>
+
+
             </ul>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- أهمية المبادرة -->
+
+    <!-- =====================================
+         أهمية المبادرة
+    ====================================== -->
+
     <section class="content-section">
+
 
         <div class="section-label">
             أهمية المبادرة
         </div>
 
-        <div class="section-content" id="importanceContent">
+
+        <div
+            class="section-content"
+            id="importanceContent">
+
 
             تنبع أهمية المبادرة من دور المدرسة في تعزيز القيم
             الإيمانية والسلوكيات الإيجابية لدى الطالبات، حيث
             تسعى المبادرة إلى ربط الطالبة بالذكر بصورة عملية
             ومستمرة، وتقديمه بأسلوب جذاب يناسب البيئة المدرسية.
 
+
             <br><br>
+
 
             كما تسهم المبادرة في استثمار التقنيات والأنشطة
             التفاعلية في نشر الأذكار، وتشجيع الطالبات على
             تطبيقها في حياتهن اليومية.
 
+
         </div>
+
 
     </section>
 
 
-    <!-- التوصيات -->
+
+    <!-- =====================================
+         التوصيات
+    ====================================== -->
+
     <section class="content-section">
+
 
         <div class="section-label">
             التوصيات
         </div>
 
+
         <div class="section-content">
 
+
             <ul>
-                <li>الاستمرار في نشر الأذكار داخل البيئة المدرسية.</li>
-                <li>تفعيل المبادرة بشكل دوري خلال العام الدراسي.</li>
-                <li>تنويع الأنشطة والوسائل المستخدمة.</li>
-                <li>تشجيع الطالبات على نقل أثر المبادرة إلى الأسرة والمجتمع.</li>
-                <li>تطوير المحتوى الإلكتروني المرتبط بالأذكار.</li>
-                <li>تحفيز وتكريم الطالبات الأكثر تفاعلاً.</li>
+
+
+                <li>
+                    الاستمرار في نشر الأذكار داخل البيئة المدرسية.
+                </li>
+
+
+                <li>
+                    تفعيل المبادرة بشكل دوري خلال العام الدراسي.
+                </li>
+
+
+                <li>
+                    تنويع الأنشطة والوسائل المستخدمة.
+                </li>
+
+
+                <li>
+                    تشجيع الطالبات على نقل أثر المبادرة إلى الأسرة والمجتمع.
+                </li>
+
+
+                <li>
+                    تطوير المحتوى الإلكتروني المرتبط بالأذكار.
+                </li>
+
+
+                <li>
+                    تحفيز وتكريم الطالبات الأكثر تفاعلاً.
+                </li>
+
+
             </ul>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- الشواهد -->
+
+    <!-- =====================================
+         الشواهد
+    ====================================== -->
+
     <section class="evidence-section">
+
 
         <div class="section-label">
             الشواهد
         </div>
 
+
         <div class="evidence-content">
+
 
             <div class="qr-box">
 
+
                 <div id="qrcode"></div>
+
 
                 <div class="qr-title">
                     مسح الرمز لعرض الشواهد
                 </div>
 
+
             </div>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- التوقيعات -->
+
+    <!-- =====================================
+         التوقيعات
+    ====================================== -->
+
     <section class="signatures">
 
 
-        <!-- المعلمة -->
+
+        <!-- =================================
+             توقيع المعلمة
+        ================================== -->
+
         <div class="signature-box">
+
 
             <div class="signature-name">
 
-                <strong>المعلمة /</strong>
+
+                <strong>
+                    المعلمة /
+                </strong>
+
 
                 <span id="teacherName">
                     سلطانه مسلط – نورة سعد
                 </span>
 
+
             </div>
+
 
 
             <div class="signature-area">
 
-                <!-- كلمة التوقيع تبقى ظاهرة -->
-                <span id="teacherSignatureText">
+
+                <!-- كلمة التوقيع لا تختفي -->
+
+                <span class="signature-text">
                     التوقيع
                 </span>
 
-                <!-- صورة التوقيع تظهر بجانبها -->
+
+
+                <!-- صورة التوقيع -->
+
                 <img
                     id="teacherSignature"
                     class="signature-image"
                     alt="توقيع المعلمة">
 
 
-                <!-- زر رفع الصورة -->
+
+                <!-- زر الكاميرا -->
+
                 <label
                     class="upload-signature"
-                    title="رفع صورة توقيع المعلمة">
+                    title="رفع صورة التوقيع">
+
 
                     📷
+
 
                     <input
                         type="file"
                         accept="image/png,image/jpeg,image/webp"
                         onchange="uploadSignature('teacher', this)">
 
+
                 </label>
 
+
             </div>
+
 
         </div>
 
 
-        <!-- المديرة -->
+
+        <!-- =================================
+             توقيع المديرة
+        ================================== -->
+
         <div class="signature-box">
+
 
             <div class="signature-name">
 
-                <strong>المديرة /</strong>
+
+                <strong>
+                    المديرة /
+                </strong>
+
 
                 <span id="principalName">
                     ترفه الحميداني
                 </span>
 
+
             </div>
+
 
 
             <div class="signature-area">
 
-                <!-- كلمة التوقيع تبقى ظاهرة -->
-                <span id="principalSignatureText">
+
+                <!-- كلمة التوقيع لا تختفي -->
+
+                <span class="signature-text">
                     التوقيع
                 </span>
 
-                <!-- صورة التوقيع تظهر بجانبها -->
+
+
+                <!-- صورة التوقيع -->
+
                 <img
                     id="principalSignature"
                     class="signature-image"
                     alt="توقيع المديرة">
 
 
-                <!-- زر رفع الصورة -->
+
+                <!-- زر الكاميرا -->
+
                 <label
                     class="upload-signature"
-                    title="رفع صورة توقيع المديرة">
+                    title="رفع صورة التوقيع">
+
 
                     📷
+
 
                     <input
                         type="file"
                         accept="image/png,image/jpeg,image/webp"
                         onchange="uploadSignature('principal', this)">
 
+
                 </label>
+
 
             </div>
 
+
         </div>
+
 
     </section>
 
 
+
+    <!-- الشريط السفلي -->
+
     <div class="bottom-line"></div>
+
 
 </div>
 
 
+
+<!-- JavaScript -->
+
 <script src="main.js"></script>
 
+
 </body>
+
 </html>
