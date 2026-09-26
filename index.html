@@ -2,29 +2,66 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>تقرير مبادرة</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <title>
+        تقرير مبادرة
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+    <!-- مكتبة QR -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+    </script>
+
 </head>
+
 
 <body>
 
+
 <div class="page">
 
-    <!-- الشريط العلوي -->
+
+    <!-- =========================
+         الشريط العلوي
+    ========================== -->
+
     <div class="top-line"></div>
 
-    <!-- الرأس -->
+
+    <!-- =========================
+         الرأس
+    ========================== -->
+
     <header class="header">
 
+
         <div class="ministry-logo">
-            <div class="logo-dots">••••••</div>
-            <div class="logo-title">وزارة التعليم</div>
-            <div class="logo-en">Ministry of Education</div>
+
+            <div class="logo-dots">
+                ••••••
+            </div>
+
+            <div class="logo-title">
+                وزارة التعليم
+            </div>
+
+            <div class="logo-en">
+                Ministry of Education
+            </div>
+
         </div>
+
+
 
         <div class="school-box">
 
@@ -48,59 +85,91 @@
     </header>
 
 
-    <!-- العنوان -->
+
+    <!-- =========================
+         عنوان التقرير
+    ========================== -->
 
     <div class="main-title">
-        تقرير مبادرة «ورد وأثر»
+
+        تقرير مبادرة
+        <span id="titleProgram">
+            «ورد وأثر»
+        </span>
+
     </div>
 
 
-    <!-- بيانات المبادرة -->
+
+    <!-- =========================
+         بيانات المبادرة
+    ========================== -->
 
     <table class="info-table">
 
-        <tr>
+        <thead>
 
-            <th>اسم البرنامج</th>
+            <tr>
 
-            <th>التاريخ</th>
+                <th>
+                    اسم البرنامج
+                </th>
 
-            <th>الفترة</th>
+                <th>
+                    التاريخ
+                </th>
 
-            <th>الفئة المستهدفة</th>
+                <th>
+                    الفترة
+                </th>
 
-        </tr>
+                <th>
+                    الفئة المستهدفة
+                </th>
 
-        <tr>
+            </tr>
 
-            <td id="programName">
-                مبادرة «ورد وأثر»
-            </td>
+        </thead>
 
-            <td id="programDate">
-                ٣ / ٤ / ١٤٤٨هـ
-            </td>
 
-            <td id="programPeriod">
-                ٤ أسابيع
-            </td>
+        <tbody>
 
-            <td id="targetGroup">
-                طالبات المدرسة
-            </td>
+            <tr>
 
-        </tr>
+                <td id="programName">
+                    مبادرة «ورد وأثر»
+                </td>
+
+                <td id="programDate">
+                    ٣ / ٤ / ١٤٤٨هـ
+                </td>
+
+                <td id="programPeriod">
+                    ٤ أسابيع
+                </td>
+
+                <td id="targetGroup">
+                    طالبات المدرسة
+                </td>
+
+            </tr>
+
+        </tbody>
 
     </table>
 
 
-    <!-- فكرة المبادرة -->
+
+    <!-- =========================
+         فكرة المبادرة
+    ========================== -->
 
     <section class="content-section">
 
         <div class="section-label">
             فكرة المبادرة
         </div>
+
 
         <div
             class="section-content"
@@ -124,13 +193,17 @@
     </section>
 
 
-    <!-- الأهداف -->
+
+    <!-- =========================
+         الأهداف
+    ========================== -->
 
     <section class="content-section objectives-section">
 
         <div class="section-label">
             الأهداف
         </div>
+
 
         <div class="section-content">
 
@@ -167,13 +240,17 @@
     </section>
 
 
-    <!-- أهمية المبادرة -->
+
+    <!-- =========================
+         أهمية المبادرة
+    ========================== -->
 
     <section class="content-section">
 
         <div class="section-label">
             أهمية المبادرة
         </div>
+
 
         <div
             class="section-content"
@@ -195,13 +272,17 @@
     </section>
 
 
-    <!-- التوصيات -->
+
+    <!-- =========================
+         التوصيات
+    ========================== -->
 
     <section class="content-section recommendations-section">
 
         <div class="section-label">
             التوصيات
         </div>
+
 
         <div class="section-content">
 
@@ -238,26 +319,24 @@
     </section>
 
 
-    <!-- الشواهد -->
+
+    <!-- =========================
+         الشواهد
+    ========================== -->
 
     <section class="evidence-section">
+
 
         <div class="section-label">
             الشواهد
         </div>
 
+
         <div class="evidence-content">
 
-            <div class="qr-placeholder" id="qrArea">
-
-                <div class="qr-icon">
-                    QR
-                </div>
-
-                <div>
-                    رمز الشواهد
-                </div>
-
+            <div
+                id="qrcode"
+                title="رمز الشواهد">
             </div>
 
         </div>
@@ -265,15 +344,23 @@
     </section>
 
 
-    <!-- التوقيعات -->
+
+    <!-- =========================
+         التوقيعات
+    ========================== -->
 
     <section class="signatures">
+
+
+        <!-- توقيع المعلمة -->
 
         <div class="signature-box">
 
             <div class="signature-name">
 
-                <strong>المعلمة /</strong>
+                <strong>
+                    المعلمة /
+                </strong>
 
                 <span id="teacherName">
                     سلطانه مسلط – نورة سعد
@@ -281,18 +368,37 @@
 
             </div>
 
-            <div class="signature-line">
-                التوقيع
+
+            <div class="signature-image-area">
+
+                <img
+                    id="teacherSignature"
+                    class="signature-image"
+                    alt="توقيع المعلمة">
+
+
+                <span
+                    id="teacherSignatureText">
+
+                    التوقيع
+
+                </span>
+
             </div>
 
         </div>
 
 
+
+        <!-- توقيع المديرة -->
+
         <div class="signature-box">
 
             <div class="signature-name">
 
-                <strong>المديرة /</strong>
+                <strong>
+                    المديرة /
+                </strong>
 
                 <span id="principalName">
                     ترفه الحميداني
@@ -300,8 +406,22 @@
 
             </div>
 
-            <div class="signature-line">
-                التوقيع
+
+            <div class="signature-image-area">
+
+                <img
+                    id="principalSignature"
+                    class="signature-image"
+                    alt="توقيع المديرة">
+
+
+                <span
+                    id="principalSignatureText">
+
+                    التوقيع
+
+                </span>
+
             </div>
 
         </div>
@@ -309,154 +429,271 @@
     </section>
 
 
-    <!-- التذييل -->
+
+    <!-- =========================
+         التذييل
+    ========================== -->
 
     <div class="bottom-line"></div>
 
 
-    <!-- لوحة التعديل -->
+</div>
+
+
+
+<!-- =========================
+     أزرار التحكم
+========================== -->
+
+<div class="page-buttons">
+
 
     <button
-        class="edit-button"
-        onclick="openEditor()">
+        class="print-button"
+        onclick="printReport()">
 
-        ⚙️ تعديل البيانات
+        🖨️ طباعة التقرير
 
     </button>
 
 
-    <!-- نافذة التعديل -->
+    <button
+        class="edit-button-page"
+        onclick="openEditor()">
 
-    <div
-        id="editorModal"
-        class="modal">
+        ⚙️ تعديل التقرير
 
-        <div class="modal-box">
-
-            <div class="modal-header">
-
-                <h2>
-                    تعديل التقرير
-                </h2>
-
-                <button
-                    onclick="closeEditor()">
-
-                    ×
-
-                </button>
-
-            </div>
+    </button>
 
 
-            <label>
-                اسم المدرسة
-            </label>
-
-            <input
-                id="editSchool"
-                type="text">
+</div>
 
 
-            <label>
-                اسم البرنامج
-            </label>
 
-            <input
-                id="editProgram"
-                type="text">
+<!-- =========================
+     نافذة التعديل
+========================== -->
 
-
-            <label>
-                التاريخ
-            </label>
-
-            <input
-                id="editDate"
-                type="text">
+<div
+    id="editorModal"
+    class="modal">
 
 
-            <label>
-                الفترة
-            </label>
-
-            <input
-                id="editPeriod"
-                type="text">
+    <div class="modal-box">
 
 
-            <label>
-                الفئة المستهدفة
-            </label>
+        <div class="modal-header">
 
-            <input
-                id="editTarget"
-                type="text">
+            <h2>
+                تعديل التقرير
+            </h2>
 
 
-            <label>
-                فكرة المبادرة
-            </label>
+            <button
+                onclick="closeEditor()">
 
-            <textarea
-                id="editIdea">
-            </textarea>
+                ×
 
-
-            <label>
-                أهمية المبادرة
-            </label>
-
-            <textarea
-                id="editImportance">
-            </textarea>
-
-
-            <label>
-                المعلمة
-            </label>
-
-            <input
-                id="editTeacher"
-                type="text">
-
-
-            <label>
-                المديرة
-            </label>
-
-            <input
-                id="editPrincipal"
-                type="text">
-
-
-            <div class="editor-buttons">
-
-                <button
-                    class="save"
-                    onclick="saveChanges()">
-
-                    حفظ التعديلات
-
-                </button>
-
-                <button
-                    class="print"
-                    onclick="window.print()">
-
-                    🖨️ طباعة
-
-                </button>
-
-            </div>
+            </button>
 
         </div>
+
+
+
+        <!-- بيانات التقرير -->
+
+        <h3>
+            بيانات التقرير
+        </h3>
+
+
+        <label>
+            اسم المدرسة
+        </label>
+
+        <input
+            id="editSchool"
+            type="text">
+
+
+
+        <label>
+            اسم البرنامج
+        </label>
+
+        <input
+            id="editProgram"
+            type="text">
+
+
+
+        <label>
+            التاريخ
+        </label>
+
+        <input
+            id="editDate"
+            type="text">
+
+
+
+        <label>
+            الفترة
+        </label>
+
+        <input
+            id="editPeriod"
+            type="text">
+
+
+
+        <label>
+            الفئة المستهدفة
+        </label>
+
+        <input
+            id="editTarget"
+            type="text">
+
+
+
+        <!-- الفكرة -->
+
+        <label>
+            فكرة المبادرة
+        </label>
+
+        <textarea
+            id="editIdea">
+        </textarea>
+
+
+
+        <!-- الأهمية -->
+
+        <label>
+            أهمية المبادرة
+        </label>
+
+        <textarea
+            id="editImportance">
+        </textarea>
+
+
+
+        <!-- المعلمة -->
+
+        <label>
+            اسم المعلمة
+        </label>
+
+        <input
+            id="editTeacher"
+            type="text">
+
+
+
+        <!-- المديرة -->
+
+        <label>
+            اسم المديرة
+        </label>
+
+        <input
+            id="editPrincipal"
+            type="text">
+
+
+
+        <!-- =========================
+             التوقيعات
+        ========================== -->
+
+        <h3>
+            صور التوقيعات
+        </h3>
+
+
+        <label>
+            رفع صورة توقيع المعلمة
+        </label>
+
+        <input
+            id="teacherSignatureInput"
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            onchange="uploadSignature('teacher')">
+
+
+
+        <div
+            id="teacherPreview"
+            class="signature-preview">
+        </div>
+
+
+
+        <label>
+            رفع صورة توقيع المديرة
+        </label>
+
+        <input
+            id="principalSignatureInput"
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            onchange="uploadSignature('principal')">
+
+
+
+        <div
+            id="principalPreview"
+            class="signature-preview">
+        </div>
+
+
+
+        <!-- الأزرار -->
+
+        <div class="editor-buttons">
+
+
+            <button
+                class="save"
+                onclick="saveChanges()">
+
+                💾 حفظ التعديلات
+
+            </button>
+
+
+            <button
+                class="print"
+                onclick="printReport()">
+
+                🖨️ طباعة التقرير
+
+            </button>
+
+
+            <button
+                class="close-editor"
+                onclick="closeEditor()">
+
+                إغلاق
+
+            </button>
+
+        </div>
+
 
     </div>
 
 </div>
 
+
+
 <script src="main.js"></script>
+
 
 </body>
 </html>
