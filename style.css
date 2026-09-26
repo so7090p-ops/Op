@@ -1,3 +1,7 @@
+/* =========================================
+   الإعدادات العامة
+========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -14,18 +18,72 @@ body {
 
     background: #e9eeee;
 
+    color: #222;
+
     font-family:
         Tahoma,
         Arial,
         sans-serif;
 
-    color: #222;
 }
 
 
-/* =================================
-   الصفحة A4
-================================= */
+/* =========================================
+   زر الطباعة أعلى الصفحة
+========================================= */
+
+.top-controls {
+
+    width: 210mm;
+
+    margin: 12px auto 8px;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+}
+
+
+.print-top {
+
+    border: none;
+
+    background: #159589;
+
+    color: white;
+
+    padding:
+        9px 20px;
+
+    border-radius: 7px;
+
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 6px
+        rgba(0,0,0,.15);
+
+}
+
+
+.print-top:hover {
+
+    background: #117b73;
+
+}
+
+
+/* =========================================
+   صفحة A4
+========================================= */
 
 .page {
 
@@ -33,7 +91,7 @@ body {
 
     min-height: 297mm;
 
-    margin: 15px auto;
+    margin: 0 auto 20px;
 
     background: white;
 
@@ -49,9 +107,9 @@ body {
 }
 
 
-/* =================================
+/* =========================================
    الشريط العلوي
-================================= */
+========================================= */
 
 .top-line {
 
@@ -70,9 +128,9 @@ body {
 }
 
 
-/* =================================
+/* =========================================
    الرأس
-================================= */
+========================================= */
 
 .header {
 
@@ -91,9 +149,9 @@ body {
 
 .ministry-logo {
 
-    text-align: center;
-
     width: 130px;
+
+    text-align: center;
 
     color: #159b8e;
 
@@ -131,13 +189,15 @@ body {
 
 .school-box {
 
+    min-width: 190px;
+
+    padding:
+        8px 15px;
+
     border:
         1.5px solid #159b8e;
 
     border-radius: 16px;
-
-    padding:
-        8px 15px;
 
     text-align: center;
 
@@ -149,14 +209,12 @@ body {
 
     color: #333;
 
-    min-width: 190px;
-
 }
 
 
-/* =================================
+/* =========================================
    عنوان التقرير
-================================= */
+========================================= */
 
 .main-title {
 
@@ -181,9 +239,9 @@ body {
 }
 
 
-/* =================================
+/* =========================================
    جدول البيانات
-================================= */
+========================================= */
 
 .info-table {
 
@@ -203,6 +261,8 @@ body {
 
 .info-table th {
 
+    padding: 6px;
+
     background: #20a18d;
 
     color: white;
@@ -210,42 +270,40 @@ body {
     border:
         1px solid #146d65;
 
-    padding: 6px;
-
 }
 
 
 .info-table td {
 
+    padding: 7px;
+
     border:
         1px solid #777;
-
-    padding: 7px;
 
     font-weight: bold;
 
 }
 
 
-/* =================================
+/* =========================================
    الأقسام
-================================= */
+========================================= */
 
 .content-section {
 
     position: relative;
 
+    min-height: 58px;
+
+    margin-bottom: 10px;
+
+    padding:
+        12px 18px 10px;
+
     border:
         1.5px solid #888;
 
     border-radius: 14px;
-
-    margin-bottom: 10px;
-
-    min-height: 58px;
-
-    padding:
-        12px 18px 10px;
 
     font-size: 10px;
 
@@ -258,16 +316,16 @@ body {
 
     position: absolute;
 
+    top: -1px;
+
     right: -1px;
 
-    top: -1px;
+    padding:
+        5px 13px;
 
     background: #20a18d;
 
     color: white;
-
-    padding:
-        5px 13px;
 
     border-radius:
         0 9px 0 9px;
@@ -288,10 +346,6 @@ body {
 }
 
 
-/* =================================
-   القوائم
-================================= */
-
 .section-content ul {
 
     margin: 0;
@@ -308,24 +362,24 @@ body {
 }
 
 
-/* =================================
-   الشواهد
-================================= */
+/* =========================================
+   قسم الشواهد
+========================================= */
 
 .evidence-section {
 
     position: relative;
 
-    border:
-        1.5px solid #168fbd;
-
-    border-radius: 14px;
-
-    height: 80px;
+    height: 82px;
 
     margin-top: 5px;
 
     overflow: hidden;
+
+    border:
+        1.5px solid #168fbd;
+
+    border-radius: 14px;
 
 }
 
@@ -343,11 +397,20 @@ body {
 }
 
 
+.qr-box {
+
+    text-align: center;
+
+}
+
+
 #qrcode {
 
-    width: 70px;
+    width: 68px;
 
-    height: 70px;
+    height: 68px;
+
+    margin: auto;
 
     display: flex;
 
@@ -376,9 +439,20 @@ body {
 }
 
 
-/* =================================
+.qr-title {
+
+    margin-top: 2px;
+
+    color: #555;
+
+    font-size: 7px;
+
+}
+
+
+/* =========================================
    التوقيعات
-================================= */
+========================================= */
 
 .signatures {
 
@@ -391,15 +465,15 @@ body {
 
     margin-top: 12px;
 
+    padding:
+        10px 25px;
+
+    min-height: 75px;
+
     border:
         1.5px solid #888;
 
     border-radius: 14px;
-
-    padding:
-        10px 25px;
-
-    min-height: 72px;
 
 }
 
@@ -410,8 +484,6 @@ body {
 
     font-size: 11px;
 
-    line-height: 1.7;
-
 }
 
 
@@ -419,14 +491,14 @@ body {
 
     min-height: 22px;
 
+    line-height: 1.7;
+
 }
 
 
-.signature-image-area {
+.signature-area {
 
-    height: 38px;
-
-    margin-top: 3px;
+    height: 43px;
 
     display: flex;
 
@@ -434,18 +506,20 @@ body {
 
     align-items: center;
 
+    gap: 8px;
+
 }
 
 
 .signature-image {
 
-    max-width: 135px;
+    display: none;
+
+    max-width: 125px;
 
     max-height: 38px;
 
     object-fit: contain;
-
-    display: none;
 
 }
 
@@ -453,18 +527,65 @@ body {
 #teacherSignatureText,
 #principalSignatureText {
 
-    font-size: 11px;
+    color: #555;
+
+    font-size: 10px;
 
     font-weight: bold;
-
-    color: #444;
 
 }
 
 
-/* =================================
+/* =========================================
+   زر رفع التوقيع
+========================================= */
+
+.upload-signature {
+
+    width: 26px;
+
+    height: 26px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #159589;
+
+    color: white;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition: .2s;
+
+}
+
+
+.upload-signature:hover {
+
+    background: #117b73;
+
+    transform: scale(1.05);
+
+}
+
+
+.upload-signature input {
+
+    display: none;
+
+}
+
+
+/* =========================================
    التذييل
-================================= */
+========================================= */
 
 .bottom-line {
 
@@ -489,326 +610,20 @@ body {
 }
 
 
-/* =================================
-   أزرار التحكم
-================================= */
-
-.page-buttons {
-
-    position: fixed;
-
-    bottom: 20px;
-
-    left: 20px;
-
-    display: flex;
-
-    gap: 8px;
-
-    z-index: 9999;
-
-}
-
-
-.page-buttons button {
-
-    border: none;
-
-    border-radius: 8px;
-
-    padding:
-        10px 18px;
-
-    color: white;
-
-    font-family:
-        Tahoma,
-        Arial,
-        sans-serif;
-
-    font-size: 12px;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 3px 10px
-        rgba(0,0,0,.2);
-
-}
-
-
-.print-button {
-
-    background: #159589;
-
-}
-
-
-.edit-button-page {
-
-    background: #164d5b;
-
-}
-
-
-.page-buttons button:hover {
-
-    opacity: .9;
-
-}
-
-
-/* =================================
-   النافذة
-================================= */
-
-.modal {
-
-    display: none;
-
-    position: fixed;
-
-    inset: 0;
-
-    background:
-        rgba(0,0,0,.55);
-
-    z-index: 10000;
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 15px;
-
-}
-
-
-.modal.show {
-
-    display: flex;
-
-}
-
-
-.modal-box {
-
-    background: white;
-
-    width:
-        min(620px, 100%);
-
-    max-height: 92vh;
-
-    overflow-y: auto;
-
-    border-radius: 15px;
-
-    padding: 20px;
-
-    direction: rtl;
-
-}
-
-
-.modal-header {
-
-    display: flex;
-
-    justify-content:
-        space-between;
-
-    align-items: center;
-
-    border-bottom:
-        1px solid #ddd;
-
-    margin-bottom: 15px;
-
-}
-
-
-.modal-header h2 {
-
-    margin: 0 0 10px;
-
-    color: #164d5b;
-
-}
-
-
-.modal-header button {
-
-    border: none;
-
-    background: #b54d4d;
-
-    color: white;
-
-    border-radius: 5px;
-
-    font-size: 20px;
-
-    padding:
-        2px 9px;
-
-    cursor: pointer;
-
-}
-
-
-.modal-box h3 {
-
-    color: #159589;
-
-    border-bottom:
-        1px solid #ddd;
-
-    padding-bottom: 5px;
-
-    margin-top: 18px;
-
-}
-
-
-.modal-box label {
-
-    display: block;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    margin:
-        9px 0 4px;
-
-}
-
-
-.modal-box input,
-.modal-box textarea {
-
-    width: 100%;
-
-    border:
-        1px solid #ccd6d6;
-
-    border-radius: 6px;
-
-    padding: 8px;
-
-    font-family: Tahoma;
-
-    font-size: 11px;
-
-}
-
-
-.modal-box textarea {
-
-    min-height: 100px;
-
-    resize: vertical;
-
-}
-
-
-.modal-box input:focus,
-.modal-box textarea:focus {
-
-    outline: none;
-
-    border-color: #159589;
-
-}
-
-
-/* =================================
-   معاينة التوقيع
-================================= */
-
-.signature-preview {
-
-    min-height: 10px;
-
-    margin-top: 5px;
-
-    text-align: center;
-
-}
-
-
-.signature-preview img {
-
-    max-width: 160px;
-
-    max-height: 60px;
-
-    object-fit: contain;
-
-}
-
-
-/* =================================
-   أزرار النافذة
-================================= */
-
-.editor-buttons {
-
-    display: flex;
-
-    gap: 8px;
-
-    margin-top: 18px;
-
-}
-
-
-.editor-buttons button {
-
-    flex: 1;
-
-    border: none;
-
-    border-radius: 7px;
-
-    padding: 10px;
-
-    color: white;
-
-    cursor: pointer;
-
-    font-family: Tahoma;
-
-}
-
-
-.save {
-
-    background: #159589;
-
-}
-
-
-.print {
-
-    background: #164d5b;
-
-}
-
-
-.close-editor {
-
-    background: #777;
-
-}
-
-
-/* =================================
+/* =========================================
    الجوال
-================================= */
+========================================= */
 
 @media (max-width: 700px) {
+
+    .top-controls {
+
+        width: 100%;
+
+        padding: 0 10px;
+
+    }
+
 
     .page {
 
@@ -823,7 +638,7 @@ body {
 
     .header {
 
-        gap: 10px;
+        gap: 8px;
 
     }
 
@@ -859,23 +674,15 @@ body {
 
     }
 
-
-    .page-buttons {
-
-        left: 10px;
-
-        bottom: 10px;
-
-    }
-
 }
 
 
-/* =================================
+/* =========================================
    الطباعة
-================================= */
+========================================= */
 
 @media print {
+
 
     @page {
 
@@ -902,6 +709,13 @@ body {
     }
 
 
+    .top-controls {
+
+        display: none !important;
+
+    }
+
+
     .page {
 
         width: 210mm;
@@ -922,43 +736,9 @@ body {
     }
 
 
-    .page-buttons,
-    .modal {
+    .upload-signature {
 
         display: none !important;
-
-    }
-
-
-    * {
-
-        -webkit-print-color-adjust:
-            exact !important;
-
-        print-color-adjust:
-            exact !important;
-
-    }
-
-
-    .top-line {
-
-        background:
-            linear-gradient(
-                to left,
-                #159b8e,
-                #168fc0
-            ) !important;
-
-    }
-
-
-    .info-table th,
-    .section-label {
-
-        background: #20a18d !important;
-
-        color: white !important;
 
     }
 
@@ -972,7 +752,7 @@ body {
     }
 
 
-    .signature-image-area {
+    .signature-area {
 
         height: 13mm !important;
 
@@ -985,6 +765,17 @@ body {
         width: 23mm !important;
 
         height: 23mm !important;
+
+    }
+
+
+    * {
+
+        -webkit-print-color-adjust:
+            exact !important;
+
+        print-color-adjust:
+            exact !important;
 
     }
 

@@ -9,38 +9,50 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>
-        تقرير مبادرة
-    </title>
+    <title>تقرير مبادرة</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css">
+    <!-- مكتبة إنشاء QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
-    <!-- مكتبة QR -->
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-    </script>
+    <link rel="stylesheet" href="style.css">
 
 </head>
-
 
 <body>
 
 
+<!-- =========================================
+     زر الطباعة أعلى الصفحة
+========================================= -->
+
+<div class="top-controls">
+
+    <button
+        class="print-top"
+        onclick="printReport()">
+
+        🖨️ طباعة التقرير
+
+    </button>
+
+</div>
+
+
+<!-- =========================================
+     الصفحة
+========================================= -->
+
 <div class="page">
 
 
-    <!-- =========================
-         الشريط العلوي
-    ========================== -->
+    <!-- الشريط العلوي -->
 
     <div class="top-line"></div>
 
 
-    <!-- =========================
+    <!-- =====================================
          الرأس
-    ========================== -->
+    ====================================== -->
 
     <header class="header">
 
@@ -74,10 +86,13 @@
             </div>
 
             <div>
+
                 المدرسة /
+
                 <span id="schoolName">
                     متوسطة وثانوية ربيق
                 </span>
+
             </div>
 
         </div>
@@ -85,14 +100,14 @@
     </header>
 
 
-
-    <!-- =========================
+    <!-- =====================================
          عنوان التقرير
-    ========================== -->
+    ====================================== -->
 
     <div class="main-title">
 
         تقرير مبادرة
+
         <span id="titleProgram">
             «ورد وأثر»
         </span>
@@ -100,10 +115,9 @@
     </div>
 
 
-
-    <!-- =========================
+    <!-- =====================================
          بيانات المبادرة
-    ========================== -->
+    ====================================== -->
 
     <table class="info-table">
 
@@ -159,10 +173,9 @@
     </table>
 
 
-
-    <!-- =========================
+    <!-- =====================================
          فكرة المبادرة
-    ========================== -->
+    ====================================== -->
 
     <section class="content-section">
 
@@ -193,10 +206,9 @@
     </section>
 
 
-
-    <!-- =========================
+    <!-- =====================================
          الأهداف
-    ========================== -->
+    ====================================== -->
 
     <section class="content-section objectives-section">
 
@@ -207,7 +219,7 @@
 
         <div class="section-content">
 
-            <ul id="objectivesList">
+            <ul>
 
                 <li>
                     تعزيز ارتباط الطالبات بذكر الله تعالى.
@@ -240,10 +252,9 @@
     </section>
 
 
-
-    <!-- =========================
+    <!-- =====================================
          أهمية المبادرة
-    ========================== -->
+    ====================================== -->
 
     <section class="content-section">
 
@@ -272,10 +283,9 @@
     </section>
 
 
-
-    <!-- =========================
+    <!-- =====================================
          التوصيات
-    ========================== -->
+    ====================================== -->
 
     <section class="content-section recommendations-section">
 
@@ -286,7 +296,7 @@
 
         <div class="section-content">
 
-            <ul id="recommendationsList">
+            <ul>
 
                 <li>
                     الاستمرار في نشر الأذكار داخل البيئة المدرسية.
@@ -319,10 +329,9 @@
     </section>
 
 
-
-    <!-- =========================
+    <!-- =====================================
          الشواهد
-    ========================== -->
+    ====================================== -->
 
     <section class="evidence-section">
 
@@ -334,20 +343,29 @@
 
         <div class="evidence-content">
 
-            <div
-                id="qrcode"
-                title="رمز الشواهد">
+
+            <div class="qr-box">
+
+                <div
+                    id="qrcode">
+                </div>
+
+
+                <div class="qr-title">
+                    مسح الرمز لعرض الشواهد
+                </div>
+
             </div>
+
 
         </div>
 
     </section>
 
 
-
-    <!-- =========================
+    <!-- =====================================
          التوقيعات
-    ========================== -->
+    ====================================== -->
 
     <section class="signatures">
 
@@ -355,6 +373,7 @@
         <!-- توقيع المعلمة -->
 
         <div class="signature-box">
+
 
             <div class="signature-name">
 
@@ -369,7 +388,8 @@
             </div>
 
 
-            <div class="signature-image-area">
+            <div class="signature-area">
+
 
                 <img
                     id="teacherSignature"
@@ -384,7 +404,25 @@
 
                 </span>
 
+
+                <!-- زر رفع توقيع المعلمة -->
+
+                <label
+                    class="upload-signature"
+                    title="رفع صورة توقيع المعلمة">
+
+                    📷
+
+                    <input
+                        type="file"
+                        accept="image/png,image/jpeg,image/webp"
+                        onchange="uploadSignature('teacher', this)">
+
+                </label>
+
+
             </div>
+
 
         </div>
 
@@ -393,6 +431,7 @@
         <!-- توقيع المديرة -->
 
         <div class="signature-box">
+
 
             <div class="signature-name">
 
@@ -407,7 +446,8 @@
             </div>
 
 
-            <div class="signature-image-area">
+            <div class="signature-area">
+
 
                 <img
                     id="principalSignature"
@@ -422,17 +462,33 @@
 
                 </span>
 
+
+                <!-- زر رفع توقيع المديرة -->
+
+                <label
+                    class="upload-signature"
+                    title="رفع صورة توقيع المديرة">
+
+                    📷
+
+                    <input
+                        type="file"
+                        accept="image/png,image/jpeg,image/webp"
+                        onchange="uploadSignature('principal', this)">
+
+                </label>
+
+
             </div>
 
+
         </div>
+
 
     </section>
 
 
-
-    <!-- =========================
-         التذييل
-    ========================== -->
+    <!-- التذييل -->
 
     <div class="bottom-line"></div>
 
@@ -440,260 +496,9 @@
 </div>
 
 
-
-<!-- =========================
-     أزرار التحكم
-========================== -->
-
-<div class="page-buttons">
-
-
-    <button
-        class="print-button"
-        onclick="printReport()">
-
-        🖨️ طباعة التقرير
-
-    </button>
-
-
-    <button
-        class="edit-button-page"
-        onclick="openEditor()">
-
-        ⚙️ تعديل التقرير
-
-    </button>
-
-
-</div>
-
-
-
-<!-- =========================
-     نافذة التعديل
-========================== -->
-
-<div
-    id="editorModal"
-    class="modal">
-
-
-    <div class="modal-box">
-
-
-        <div class="modal-header">
-
-            <h2>
-                تعديل التقرير
-            </h2>
-
-
-            <button
-                onclick="closeEditor()">
-
-                ×
-
-            </button>
-
-        </div>
-
-
-
-        <!-- بيانات التقرير -->
-
-        <h3>
-            بيانات التقرير
-        </h3>
-
-
-        <label>
-            اسم المدرسة
-        </label>
-
-        <input
-            id="editSchool"
-            type="text">
-
-
-
-        <label>
-            اسم البرنامج
-        </label>
-
-        <input
-            id="editProgram"
-            type="text">
-
-
-
-        <label>
-            التاريخ
-        </label>
-
-        <input
-            id="editDate"
-            type="text">
-
-
-
-        <label>
-            الفترة
-        </label>
-
-        <input
-            id="editPeriod"
-            type="text">
-
-
-
-        <label>
-            الفئة المستهدفة
-        </label>
-
-        <input
-            id="editTarget"
-            type="text">
-
-
-
-        <!-- الفكرة -->
-
-        <label>
-            فكرة المبادرة
-        </label>
-
-        <textarea
-            id="editIdea">
-        </textarea>
-
-
-
-        <!-- الأهمية -->
-
-        <label>
-            أهمية المبادرة
-        </label>
-
-        <textarea
-            id="editImportance">
-        </textarea>
-
-
-
-        <!-- المعلمة -->
-
-        <label>
-            اسم المعلمة
-        </label>
-
-        <input
-            id="editTeacher"
-            type="text">
-
-
-
-        <!-- المديرة -->
-
-        <label>
-            اسم المديرة
-        </label>
-
-        <input
-            id="editPrincipal"
-            type="text">
-
-
-
-        <!-- =========================
-             التوقيعات
-        ========================== -->
-
-        <h3>
-            صور التوقيعات
-        </h3>
-
-
-        <label>
-            رفع صورة توقيع المعلمة
-        </label>
-
-        <input
-            id="teacherSignatureInput"
-            type="file"
-            accept="image/png,image/jpeg,image/webp"
-            onchange="uploadSignature('teacher')">
-
-
-
-        <div
-            id="teacherPreview"
-            class="signature-preview">
-        </div>
-
-
-
-        <label>
-            رفع صورة توقيع المديرة
-        </label>
-
-        <input
-            id="principalSignatureInput"
-            type="file"
-            accept="image/png,image/jpeg,image/webp"
-            onchange="uploadSignature('principal')">
-
-
-
-        <div
-            id="principalPreview"
-            class="signature-preview">
-        </div>
-
-
-
-        <!-- الأزرار -->
-
-        <div class="editor-buttons">
-
-
-            <button
-                class="save"
-                onclick="saveChanges()">
-
-                💾 حفظ التعديلات
-
-            </button>
-
-
-            <button
-                class="print"
-                onclick="printReport()">
-
-                🖨️ طباعة التقرير
-
-            </button>
-
-
-            <button
-                class="close-editor"
-                onclick="closeEditor()">
-
-                إغلاق
-
-            </button>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-
-
 <script src="main.js"></script>
 
 
 </body>
+
 </html>
