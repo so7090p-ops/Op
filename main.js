@@ -24,26 +24,24 @@ function createQRCode() {
     container.innerHTML = "";
 
 
-    if (
-        typeof QRCode ===
-        "undefined"
-    ) {
+    if (typeof QRCode === "undefined") {
 
         container.innerHTML = `
-            <div class="qr-error">
+            <div style="
+                font-size:7px;
+                color:#777;
+                text-align:center;
+            ">
                 جاري تحميل الرمز...
             </div>
         `;
-
 
         setTimeout(
             createQRCode,
             1000
         );
 
-
         return;
-
     }
 
 
@@ -52,7 +50,6 @@ function createQRCode() {
         new QRCode(
             container,
             {
-
                 text: evidenceURL,
 
                 width: 68,
@@ -61,33 +58,28 @@ function createQRCode() {
 
                 correctLevel:
                     QRCode.CorrectLevel.H
-
             }
         );
 
-    }
-
-    catch(error) {
+    } catch (error) {
 
         console.error(
-            "QR Error:",
+            "خطأ في إنشاء QR:",
             error
         );
 
     }
-
 }
 
 
 /* =========================================
-   رفع التوقيع
+   رفع صورة التوقيع
 ========================================= */
 
 function uploadSignature(
     type,
     input
 ) {
-
 
     if (
         !input ||
@@ -96,7 +88,6 @@ function uploadSignature(
     ) {
 
         return;
-
     }
 
 
@@ -104,12 +95,8 @@ function uploadSignature(
         input.files[0];
 
 
-    /* التأكد من أنها صورة */
-
     if (
-        !file.type.startsWith(
-            "image/"
-        )
+        !file.type.startsWith("image/")
     ) {
 
         alert(
@@ -117,7 +104,6 @@ function uploadSignature(
         );
 
         return;
-
     }
 
 
@@ -128,31 +114,18 @@ function uploadSignature(
     reader.onload =
         function(event) {
 
-
             const imageData =
                 event.target.result;
 
 
             let image;
 
-            let text;
 
-
-            if (
-                type ===
-                "teacher"
-            ) {
-
+            if (type === "teacher") {
 
                 image =
                     document.getElementById(
                         "teacherSignature"
-                    );
-
-
-                text =
-                    document.getElementById(
-                        "teacherSignatureText"
                     );
 
 
@@ -161,21 +134,13 @@ function uploadSignature(
                     imageData
                 );
 
-
             }
 
             else {
 
-
                 image =
                     document.getElementById(
                         "principalSignature"
-                    );
-
-
-                text =
-                    document.getElementById(
-                        "principalSignatureText"
                     );
 
 
@@ -187,24 +152,25 @@ function uploadSignature(
             }
 
 
+            /* إظهار الصورة */
+
             image.src =
                 imageData;
 
 
             image.style.display =
-                "block";
+                "inline-block";
 
-
-            text.style.display =
-                "none";
-
+            /*
+             * مهم:
+             * لا نخفي كلمة "التوقيع".
+             * ستبقى ظاهرة بجانب الصورة.
+             */
 
         };
 
 
-    reader.readAsDataURL(
-        file
-    );
+    reader.readAsDataURL(file);
 
 }
 
@@ -232,16 +198,9 @@ function loadSignatures() {
 
     if (teacherSignature) {
 
-
         const image =
             document.getElementById(
                 "teacherSignature"
-            );
-
-
-        const text =
-            document.getElementById(
-                "teacherSignatureText"
             );
 
 
@@ -250,11 +209,7 @@ function loadSignatures() {
 
 
         image.style.display =
-            "block";
-
-
-        text.style.display =
-            "none";
+            "inline-block";
 
     }
 
@@ -263,16 +218,9 @@ function loadSignatures() {
 
     if (principalSignature) {
 
-
         const image =
             document.getElementById(
                 "principalSignature"
-            );
-
-
-        const text =
-            document.getElementById(
-                "principalSignatureText"
             );
 
 
@@ -281,11 +229,7 @@ function loadSignatures() {
 
 
         image.style.display =
-            "block";
-
-
-        text.style.display =
-            "none";
+            "inline-block";
 
     }
 
@@ -293,7 +237,7 @@ function loadSignatures() {
 
 
 /* =========================================
-   طباعة التقرير
+   الطباعة
 ========================================= */
 
 function printReport() {
@@ -311,12 +255,9 @@ document.addEventListener(
     "DOMContentLoaded",
     function() {
 
-
         createQRCode();
 
-
         loadSignatures();
-
 
     }
 );
