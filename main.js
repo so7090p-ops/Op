@@ -93,9 +93,7 @@ function uploadSignature(
 ) {
 
 
-    /*
-     * إذا لم يتم اختيار صورة
-     */
+    /* لا توجد صورة */
 
     if (
         !input ||
@@ -112,9 +110,7 @@ function uploadSignature(
         input.files[0];
 
 
-    /*
-     * التأكد من أن الملف صورة
-     */
+    /* التأكد من أن الملف صورة */
 
     if (
         !file.type.startsWith("image/")
@@ -143,10 +139,13 @@ function uploadSignature(
 
             let image;
 
+            let cameraButton;
 
-            /*
-             * توقيع المعلمة
-             */
+
+
+            /* =================================
+               توقيع المعلمة
+            ================================= */
 
             if (
                 type === "teacher"
@@ -157,12 +156,18 @@ function uploadSignature(
                         "teacherSignature"
                     );
 
+                cameraButton =
+                    document.getElementById(
+                        "teacherCamera"
+                    );
+
             }
 
 
-            /*
-             * توقيع المديرة
-             */
+
+            /* =================================
+               توقيع المديرة
+            ================================= */
 
             else {
 
@@ -171,32 +176,41 @@ function uploadSignature(
                         "principalSignature"
                     );
 
+                cameraButton =
+                    document.getElementById(
+                        "principalCamera"
+                    );
+
             }
 
 
-            /*
-             * عرض الصورة
-             */
+
+            /* =================================
+               عرض صورة التوقيع
+            ================================= */
 
             image.src =
                 imageData;
-
 
             image.style.display =
                 "inline-block";
 
 
-            /*
-             * مهم جدًا:
-             *
-             * لا يوجد localStorage
-             *
-             * لذلك الصورة لا تحفظ
-             * بعد إغلاق الصفحة.
-             *
-             * عند فتح الرابط من جديد
-             * يبدأ بدون توقيع.
-             */
+
+            /* =================================
+               إخفاء الكاميرا فوراً
+            ================================= */
+
+            if (cameraButton) {
+
+                cameraButton.style.display =
+                    "none";
+
+                cameraButton.style.visibility =
+                    "hidden";
+
+            }
+
 
         };
 
@@ -228,20 +242,17 @@ document.addEventListener(
     function() {
 
 
-        /*
-         * إنشاء QR
-         */
+        /* إنشاء QR */
 
         createQRCode();
 
 
         /*
-         * لا يوجد تحميل للتوقيعات.
+         * لا يوجد localStorage
          *
-         * كل فتح جديد يبدأ
-         * بدون أي توقيع.
+         * لذلك التوقيعات لا تُحفظ
+         * عند إعادة فتح الرابط.
          */
-
 
     }
 );
